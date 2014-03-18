@@ -8,6 +8,6 @@ require 'mongoid_geospatial/helpers/delegate'
 
 require 'mongoid_geospatial/fields/geometry_field'
 
-%w{point circle box line polygon}.each do |type|
+%w{point geo_point circle box line polygon}.each do |type|
   require "mongoid_geospatial/fields/#{type}"
 end
