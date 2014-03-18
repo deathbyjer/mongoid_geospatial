@@ -26,7 +26,7 @@ module Mongoid
       class << self
         def array_to_structure(arr)
           return nil if arr.nil?
-          {type: "Point", coordinates:[from_hash_x(hsh), from_hash_y(hsh)]}
+          {type: "Point", coordinates:arr}
         end
         # Makes life easier:
         # "" -> nil
