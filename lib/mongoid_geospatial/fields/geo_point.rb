@@ -5,6 +5,14 @@ module Mongoid
     class GeoPoint < Point
       include Enumerable
 
+
+
+      def initialize(x = nil, y = nil)
+        if x && y
+          @x, @y = x, y
+        end
+      end
+
       # Object -> Database
       # Let's store NilClass if we are invalid.
       def to_a
