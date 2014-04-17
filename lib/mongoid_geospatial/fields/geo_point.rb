@@ -12,6 +12,14 @@ module Mongoid
           @x, @y = x, y
         end
       end
+ 
+      def x=(x)
+        @x = x
+      end
+
+      def y=(y)
+        @y = y
+      end
 
       # Object -> Database
       # Let's store NilClass if we are invalid.
